@@ -18,6 +18,7 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) 
     : AForm(other), target(other.target) 
 {
+
 }
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &other)

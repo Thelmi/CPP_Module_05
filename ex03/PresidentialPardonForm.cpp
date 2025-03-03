@@ -18,7 +18,8 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &oth
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &other)
 {
-	if (this != &other) {
+	if (this != &other)
+	{
 		AForm::operator=(other);
 		target = other.target;
 	}

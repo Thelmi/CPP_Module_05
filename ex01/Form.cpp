@@ -15,7 +15,7 @@ const char *Form::GradeTooLowException::what() const throw()
 Form:: Form() 
 	: name("Default"), isSigned(false), gradeToSign(150), gradeToExecute(150) 
 {
-	
+
 }
 
 Form:: Form(const std::string &name, int gradeToSign, int gradeToExecute)
