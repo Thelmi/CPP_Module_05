@@ -1,0 +1,78 @@
+
+
+More and More changes in this excercises
+
+This time the Form will be AForm, wink wink (abstract form) ... lets say abstract class
+
+/* abstract class
+
+	any abstract class can't be instiated it means you can take an object out of it, it's basically an interface
+	to know its an abstract class, it will contain a pure virtual function
+	
+	virtual void action() const = 0;
+	(This is a pure virtual function, it means that all classes must have an implementation of action function)
+*/
+
+/*
+	A new function is execute, execute can't be directly used because its in abstract class
+	however it can be executed only using the derived class objects
+	
+	also put in mind the destractor is virtual just because if the case is polymorphisim
+*/
+
+/* 
+	The derived classes has action function in protected
+	since I dont want any one to use it directly because I will be forced to code a lot of if statements so better 
+	to just have one function that has an if statement to throw errors
+*/
+
+/* Constructors of shrub
+	* default Constructor *
+	its member inialized so it can be directly initialized if it wasnt then
+	it will inialized to default first
+	: AForm("ShrubberyCreationForm", 145, 137), target("default_target")
+	
+	yes, Aform can't be initialized however, a derived class can call its constructer
+	same way it calls a method since it inherited it.
+	
+	: AForm("ShrubberyCreationForm", 145, 137), target(target)
+	
+	ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
+    : AForm(other), target(other.target)
+*/
+/*
+	void ShrubberyCreationForm::action() const
+	{
+		std::string filename = target + "_shrubbery";  name of the shruberry
+		std::ofstream file(filename.c_str()); // turn it to char *
+	
+		if (!file.is_open())
+		{
+			std::cerr << "Error: Could not open file " << filename << std::endl;
+			return;
+		}
+	
+		file << "      /\\      \n";
+		file << "     /\\*\\     \n";
+		file << "    /\\O\\*\\    \n";
+		file << "   /*/\\/\\/\\   \n";
+		file << "  /\\O\\/\\*\\/\\  \n";
+		file << " /\\*\\/\\*\\/\\/\\ \n";
+		file << "/\\O\\/\\/*/\\/O/\\\n";
+		file << "      ||      \n";
+		file << "      ||      \n";
+		file << "      ||      \n";
+	
+		file.close();
+		std::cout << "Shrubbery created in " << filename << std::endl;
+	}
+*/
+
+/*
+	presidential is easy...
+*/
+
+/*
+	
+*/
+

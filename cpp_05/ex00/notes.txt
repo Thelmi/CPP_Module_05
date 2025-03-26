@@ -1,0 +1,49 @@
+/* private:
+		const std::string name;
+		int grade;
+		
+		
+so both name and grade are private
+
+name is basically the name of the bucreate.
+	grade is what level they are on the authority triangle
+	
+	the greater the number of the grade the lower the level
+
+	150 grade has the lowest authority (can't have a lower number)
+	1 has the highest authority (can't have a higher number)
+
+	thats why we are using catch and try
+*/
+
+/*
+	class GradeTooHighException : public std::exception 
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+
+		class GradeTooLowException : public std::exception 
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+		
+		std:: exception is a class in std name space it is exception library
+		the exception class is the base class,
+		and runtime error, logic error, custom class error I did
+		
+	/* virtual const char* what() const throw(); (Analysis)
+		virtual helps in runtime polymorphism
+		if a pointer base is assigned to a derived class instance it use a function
+		if it doesnt have virtual it would get confused and it would know that the
+		function has same naming but in a derived class
+		
+		const means it will return a const char *
+		what() is the custom function we created it returns a description of the intention
+		const doesnt change anything 
+		and throw means it wont throw an error inside of the function
+		
+	*/
+		
+*/

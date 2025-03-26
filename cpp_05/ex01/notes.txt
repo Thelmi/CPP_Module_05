@@ -1,0 +1,59 @@
+
+what is new in this exercise is the form file and 
+we changed a bit bureacret excercise as well.
+
+/*
+	First thing new in the form hpp file is the call of
+	
+	bureacret class (class Bureaucrat)
+	
+	that because if included Bureaucrat in Form 
+	and Form in Bureaucrat then it will cause infinity loop
+	thats and because we know we only need the class so 
+	calling the class is good enough
+*/
+
+/*
+	const	std::string name;
+	bool	isSigned;
+	const	int	gradeToSign;
+	const	int	gradeToExecute;
+	
+	name is the name a normal string
+	
+	issigned is a boolean to see if its signed or not
+	
+	gradeToSign is the grade that is least allowed to sign
+	gradeToexecute is supposebly the grade that is least allowed to sign
+*/
+
+/* important things to know about form constructors
+	default constructor does this
+	 name("Default")
+	isSigned(false)
+	gradeToSign(150)
+	gradeToExecute(150)
+	
+	I choose those to make sure it doesnt go outside of the range
+	the paramater constructor get signed and then checks if it a legal grade
+	and also isSigned(false)
+*/
+
+/* The last function that is different
+
+it needs an arguement bureaucrat
+
+beSigned so this function test first if the grade of the bureaucrat
+is larger than the grade to signed then it is lower
+
+then it assign true to issigned
+
+isSigned = true 
+*/
+
+/* the only difference in the bureaucrat is the wrapper function
+
+	so the Bureaucrat has a function that need a form object as an arguement
+	and that function basically tries the be signed function
+	if it fails it catches it writes couldnt sign it
+*/
